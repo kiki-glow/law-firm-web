@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-navy: #0b1a2e;
+  --color-brand-cream: #f8f5f0;
+  --color-brand-gold: #c6a15e;
+  --color-brand-bronze: #8c6f46;
+
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+body {
+  background-color: var(--color-brand-cream);
+  color: var(--color-brand-navy);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+}
+
+.prose p {
+  line-height: 1.625;
+}
