@@ -3,7 +3,7 @@ import { TESTIMONIALS } from "@/lib/data"
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-brand-cream" aria-labelledby="testimonials-heading">
+    <section className="py-12 bg-brand-cream" aria-labelledby="testimonials-heading">
         <div className="container mx-auto px-6 md:px-12">
             <div className="text-center max-w-2xl mx-auto mb-16">
                 <h2 className="text-4xl md:text-5xl" id="testimonials-heading">Trusted by Those We Serve</h2>

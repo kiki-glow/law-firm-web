@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export default function AttorneysPage() {
   return (
-    <section className="py-24 bg-brand-cream">
+    <section className="py-12 bg-brand-cream">
         <div className="container mx-auto px-6 md:px-12">
             <h1 className="text-5xl font-serif text-brand-navy mb-4">Meet Our Legal Team</h1>
             <p className="text-brand-navy/70 max-w-2xl mb-16">Dedicated legal professionals with a combined 20+ years of courtroom experience.</p>

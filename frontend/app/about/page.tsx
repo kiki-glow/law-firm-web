@@ -1,15 +1,9 @@
 import About from "@/components/About"
-import WhyUs from "@/components/WhyUs"
-import Testimonials from "@/components/Testimonials"
-import FAQ from "@/components/FAQ"
 
 export default function AboutPage() {
   return (
-    <main>
+    <main className="pt-8">
         <About />
-        <WhyUs />
-        <Testimonials />
-        <FAQ />
     </main>
   )
 }

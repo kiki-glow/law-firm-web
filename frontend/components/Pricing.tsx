@@ -3,7 +3,7 @@ import { PRICING_PLANS } from "@/lib/data";
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-24 bg-brand-navy text-brand-cream" aria-labelledby="pricing-heading">
+    <section id="pricing" className="py-12 bg-brand-navy text-brand-cream" aria-labelledby="pricing-heading">
         <div className="container mx-auto px-6 md:px-12">
             <div className="text-center max-w-2xl mx-auto mb-16">
                 <h2 className="text-4xl md:text-5xl" id="pricing-heading">Transparent Pricing</h2>

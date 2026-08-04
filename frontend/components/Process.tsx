@@ -2,7 +2,7 @@ import { PROCESS_STEPS } from "@/lib/data";
 
 export default function Process() {
   return (
-    <section className="py-24 bg-[#f3efe9]" aria-labelledby="process-heading">
+    <section className="py-12 bg-[#f3efe9]" aria-labelledby="process-heading">
         <div className="container mx-auto px-6 md:px-12">
             <div className="text-center max-w-2xl mx-auto mb-16">
                 <h2 className="text-4xl md:text-5xl" id="process-heading">Our Legal Process</h2>

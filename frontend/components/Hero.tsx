@@ -22,7 +22,7 @@ export default function Hero() {
                         href={"/contact"} 
                         className="flex items-center gap-2 bg-brand-gold text-brand-navy font-medium px-8 py-3.5 rounded-full hover:bg-brand-bronze hover:text-brand-cream transition shadow-lg shadow-brand-gold/25"
                     >
-                        Free Consultation <ArrowRight w-4 h-4 />
+                        Free Consultation <ArrowRight className="w-4 h-4" />
                     </Link>
                     <Link 
                         href={"/attorneys"}

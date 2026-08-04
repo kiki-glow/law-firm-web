@@ -2,7 +2,7 @@ import { SERVICES } from "@/lib/data"
 
 export default function PracticeAreasPage() {
   return (
-    <section className="py-24 bg-brand-navy text-brand-cream">
+    <section className="py-12 bg-brand-navy text-brand-cream">
         <div className="container mx-auto px-6 md:px-12">
             <h1 className="text-5xl font-serif mb-12">Our Practice Areas</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

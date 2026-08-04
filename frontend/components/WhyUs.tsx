@@ -2,7 +2,7 @@ import { WHY_US } from "@/lib/data";
 
 export default function WhyUs() {
   return (
-    <section className="py-24 bg-brand-cream" aria-labelledby="why-heading">
+    <section className="py-12 bg-brand-cream" aria-labelledby="why-heading">
         <div className="container mx-auto px-6 md:px-12">
             <div className="text-center max-w-2xl mx-auto mb-16">
                 <h2 className="text-4xl md:text-5xl" id="why-heading">Why Choose Kinya & Co.?</h2>
