@@ -14,14 +14,60 @@ body {
   background-color: var(--color-brand-cream);
   color: var(--color-brand-navy);
   font-family: var(--font-sans);
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+main {
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
   font-family: var(--font-serif);
+  letter-spacing: -0.02em;
+}
+
+p {
+  margin: 0;
 }
 
 .prose p {
   line-height: 1.625;
+}
+
+a, button, input, textarea {
+  transition: all 200ms ease;
+}
+
+a:focus-visible, 
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(198, 161, 94, 0.8);
+  outline-offset: 3px
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(100% - 1.5rem, 80rem);
+  margin-inline: auto;
+}
+
+.section-shell {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top-left, rgba(198, 161, 94, 0.12), transparent 40%);
+  pointer-events: none;
 }

@@ -16,11 +16,8 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
-        if (isOpen) {
-            document.body.style.overflow = "hidden";
-        } else {
-            document.body.style.overflow = "unset";
-        }
+        document.body.style.overflow = isOpen ? "hidden" : "unset";
+        
         return () => {
             document.body.style.overflow = "unset"
         };
@@ -28,15 +25,18 @@ export default function Navbar() {
 
     return (
         <header className="sticky top-0 z-50 bg-brand-navy/95 backdrop-blur-md border-b border-white/10">
-              <nav className="container mx-auto px-6 py-4 flex items-center justify-between" aria-label="Main navigation">
-
+              <nav className="container py-4 flex items-center justify-between" aria-label="Main navigation">
                 {/* logo */}
-                <Link href={"/"} className="flex items-center gap-2 text-brand-gold font-serif text-2xl font-bold">
+                <Link 
+                    href={"/"} 
+                    className="flex items-center gap-2 text-brand-gold font-serif text-xl font-bold transition hover:opacity-90"
+                    aria-label="Kinya & Co. home"
+                >
                     <Scale className="w-6 h-6" aria-hidden="true" /> Kinya & Co.
                 </Link>
 
                 {/* desktop menu */}
-                <div className="hidden md:flex items-center gap-8 text-sm font-medium text-brand-cream/80">
+                <div className="hidden md:flex items-center gap-7 text-sm font-medium text-brand-cream/80">
                     {navLinks.map((link) => (
                         <Link key={link.href} href={link.href} className="hover:text-brand-gold transition">
                             {link.name}
@@ -44,7 +44,7 @@ export default function Navbar() {
                     ))}
                     <Link
                         href={"/contact"}
-                        className="hidden md:inline-block bg-brand-gold text-brand-navy px-5 py-2 rounded-full font-medium hover:bg-brand-bronze transition-colors"
+                        className="inline-flex items-center justify-center rounded-full bg-brand-gold px-5 py-2.5 font-semibold text-brand-navy shadow-lg shadow-brand-gold/20 hover:bg-brand-bronze hover:text-brand-cream"
                     >
                         Book Consultation
                     </Link>
@@ -52,20 +52,23 @@ export default function Navbar() {
                
                {/* mobile menu hamburger */}
                <button 
-                    onClick={() => setIsOpen(!isOpen)}
-                    className="md:hidden text-brand-cream hover:text-brand-gold transition-colors z-50"
-                    aria-label="Toggle mobile menu"
+                    type="button"
+                    onClick={() => setIsOpen((current) => !current)}
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-brand-cream transition hover:border-brand-gold hover:text-brand-gold md:hidden"
+                    aria-label={isOpen ? "Close mobile menu" : "Open mobile menu"}
+                    aria-expanded={isOpen}
+                    aria-controls="mobile-navigation"
                 >
-                    {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                    {isOpen ? <X className="w-5 h-5" aria-hidden="true" /> : <Menu className="w-5 h-5" aria-hidden="true" />}
                 </button>
             </nav>
 
             <div 
-                className={`fixed inset-x-0 bg-brand-navy/95 backdrop-blur-lg flex flex-col items-center justify-start gap-6 transition-all duration-300 ease-in-out md:hidden 
-                ${isOpen ? "opacity-100 pointer-events-auto visible" : "opacity-0 pointer-events-none invisible"} 
-                md-hidden  pt-16 px-6 space-y-4`}
+                id="mobile-navigation"
+                className={`fixed inset-x-0 top-[72px] z-40 bg-brand-navy/95 pb-8 pt-6 shadow-2xl backdrop-blur-xl transition-all duration-300 md:hidden 
+                ${isOpen ? "opacity-100 translate-y-0" : "pointer-events-none -translate-y-3 opacity-0"}`}
             >
-                <div className="flex flex-col items-center gap-8 text-xl font-medium text-brand-cream">
+                <div className="flex flex-col items-center gap-6 text-lg font-medium text-brand-cream">
                     {navLinks.map((link) => (
                         <Link
                             key={link.href}
@@ -79,7 +82,7 @@ export default function Navbar() {
                     <Link
                         href={"/contact"}
                         onClick={() => setIsOpen(false)}
-                        className="mt-4 bg-brand-gold text-brand-navy px-10 py-4 rounded-full font-bold text-lg hover:bg-brand-bronze transition-colors mb-4"
+                        className="mt-2 bg-brand-gold text-brand-navy px-8 py-3 rounded-full font-bold text-base hover:bg-brand-bronze"
                     >
                         Book Consultation
                     </Link>

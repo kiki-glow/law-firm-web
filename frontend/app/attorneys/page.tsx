@@ -1,26 +1,33 @@
-import { TESTIMONIALS } from "@/lib/data"
-import Image from "next/image"
+import { TESTIMONIALS } from "@/lib/data";
+import Image from "next/image";
 
 export default function AttorneysPage() {
   return (
-    <section className="py-12 bg-brand-cream">
-        <div className="container mx-auto px-6 md:px-12">
-            <h1 className="text-5xl font-serif text-brand-navy mb-4">Meet Our Legal Team</h1>
-            <p className="text-brand-navy/70 max-w-2xl mb-16">Dedicated legal professionals with a combined 20+ years of courtroom experience.</p>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                {TESTIMONIALS.map((person, i) => (
-                    <div key={i} className="bg-white p-8 rounded-2xl shadow-sm text-center border-brand-navy/5">
-                        <div className="w-32 h-32 mx-auto rounded-full bg-brand-gold/20 overflow-hidden mb-4 relative">
-                            <Image src={`https://i.pravatar.cc/300?img=${i + 12}`} alt={person.name} fill className="object-cover" />
-                        </div>
-                        <h3 className="text-xl font-bold text-brand-navy">{person.name}</h3>
-                        <p className="text-brand-gold text-sm font-medium">{person.title}</p>
-                        <p className="mt-4 text-brand-navy/60 text-sm italic">"{person.quote}"</p>
-                    </div>
-                ))}
-            </div>
+    <main className="bg-brand-cream py-16 md:py-20">
+      <section className="container">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-sm font-bold uppercase tracking-[0.22em] text-brand-gold">Our Team</p>
+          <h1 className="mt-4 text-4xl font-serif text-brand-navy md:text-5xl">Meet Our Legal Team</h1>
+          <p className="mt-4 text-base leading-relaxed text-brand-navy/70 md:text-lg">
+            Dedicated legal professionals with a combined 20+ years of courtroom experience and a reputation for
+            thoughtful, strategic advocacy.
+          </p>
         </div>
-    </section>
-  )
+
+        <div className="mt-12 grid gap-8 md:grid-cols-3">
+          {TESTIMONIALS.map((person, i) => (
+            <article key={person.name} className="rounded-[2rem] border border-brand-navy/5 bg-white p-7 text-center shadow-sm">
+              <div className="relative mx-auto mb-5 h-32 w-32 overflow-hidden rounded-full bg-brand-gold/20">
+                <Image src={`https://i.pravatar.cc/300?img=${i + 12}`} alt={person.name} fill className="object-cover" />
+              </div>
+              <h3 className="text-xl font-bold text-brand-navy">{person.name}</h3>
+              <p className="mt-1 text-sm font-medium text-brand-gold">{person.title}</p>
+              <p className="mt-4 text-sm italic leading-relaxed text-brand-navy/60">“{person.quote}”</p>
+            </article>
+          ))}
+        </div>
+      </section>
+    </main>
+  );
 }
+

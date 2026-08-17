@@ -20,7 +20,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Kinya & Co. Law Firm",
   description: "Top-rated law firm specializing in criminal defense, corporate law, and family litigation. Over 5 years of excellence with 98% client satisfaction.",
-  metadataBase: new URL("https://kinyaandco.vercel.app"),
+  metadataBase: new URL("https://law-firm-web-smoky.vercel.app"),
   keywords: "law firm, criminal defense attorney, corporate lawyer, family law, legal consultation, NBO legal services",
   authors: [{ name: "Kinya & Co. Law Firm" }],
   creator: "Kinya & Co.",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Kinya & Co. | Trusted Legal Counsel",
     description: "Navigating legal hurdles with ease and certainty. Book a free consultation today.",
-    url: "https://kinyaandco.vercel.app",
+    url: "https://law-firm-web-smoky.vercel.app",
     siteName: "Kinya & Co. Law Firm",
     locale: "en_KE",
     type: "website",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://kinyaandco.vercel.app",
+    canonical: "https://law-firm-web-smoky.vercel.app",
   },
 };
 
@@ -66,7 +66,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LegalService",
   name: "Kinya & Co. Law Firm",
-  image: "https://kinyaandco.vercel.app/og-image.jpg",
+  image: "https://law-firm-web-smoky.vercel.app/og-image.jpg",
   telephone: "+254-701-234567",
   email: "contact@kinyaandco.com",
   address: {

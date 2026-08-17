@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         disallow: ["/api/", "/_next/"], // block internal API routes from being indexed
     },
-    sitemap: "https://kinyaandco.vercel.app/sitemap.xml", // TODO: change domain
+    sitemap: "https://law-firm-web-smoky.vercel.app/sitemap.xml", // TODO: change domain
   };
 }
